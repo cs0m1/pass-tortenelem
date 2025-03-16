@@ -1,103 +1,64 @@
-import Image from "next/image";
+import Link from "next/link"
+import { BookOpenIcon, AcademicCapIcon, LightBulbIcon } from "@heroicons/react/24/outline"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="flex flex-col items-center px-4 py-8 space-y-12 max-w-6xl mx-auto">
+      {/* Hero Section */}
+      <section className="text-center space-y-4">
+        <h1 className="text-4xl md:text-6xl font-bold">
+          Your Path to History Exam Success
+        </h1>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          Comprehensive preparation for the Hungarian history érettségi exam through interactive learning, AI-powered summaries, and collaborative study tools.
+        </p>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Feature Cards */}
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+        <div className="flex flex-col items-center p-6 space-y-4 rounded-lg border bg-card text-card-foreground shadow transition-all hover:shadow-lg">
+          <BookOpenIcon className="w-12 h-12" />
+          <h3 className="text-xl font-semibold">Interactive Learning</h3>
+          <p className="text-center text-muted-foreground">
+            Study with flashcards, timelines, and practice questions to reinforce your knowledge.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="flex flex-col items-center p-6 space-y-4 rounded-lg border bg-card text-card-foreground shadow transition-all hover:shadow-lg">
+          <AcademicCapIcon className="w-12 h-12" />
+          <h3 className="text-xl font-semibold">AI-Powered Summaries</h3>
+          <p className="text-center text-muted-foreground">
+            Get concise summaries of complex topics with text-to-speech support.
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center p-6 space-y-4 rounded-lg border bg-card text-card-foreground shadow transition-all hover:shadow-lg">
+          <LightBulbIcon className="w-12 h-12" />
+          <h3 className="text-xl font-semibold">Smart Practice</h3>
+          <p className="text-center text-muted-foreground">
+            Track your progress and focus on areas that need improvement.
+          </p>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="text-center space-y-6">
+        <h2 className="text-2xl font-bold">Ready to Start Learning?</h2>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link
+            href="/topics"
+            className="inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground px-8 py-3 text-sm font-medium shadow hover:bg-primary/90 transition-colors"
+          >
+            Browse Topics
+          </Link>
+          <Link
+            href="/topics/1?tab=flashcards"
+            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-8 py-3 text-sm font-medium shadow-sm hover:bg-accent hover:text-accent-foreground transition-colors"
+          >
+            Try Flashcards
+          </Link>
+        </div>
+      </section>
     </div>
-  );
+  )
 }
